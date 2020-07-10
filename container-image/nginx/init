@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ ! -z ${POD_NAME} ]; then
+  mkdir /var/log/nginx/${POD_NAME}
+  sed -i "s/nginx\/access.log/nginx\/${POD_NAME}\/access.log/g" /etc/nginx/nginx.conf
+  sed -i "s/nginx\/error.log/nginx\/${POD_NAME}\/error.log/g" /etc/nginx/nginx.conf
+fi
+
+nginx -g "daemon off;"
