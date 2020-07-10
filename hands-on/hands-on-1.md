@@ -154,7 +154,7 @@ $ kubectl delete <resource> <name>
   * `busybox`: 掛載到 /tmp
 
 * `exec` 進去 busybox 容器內，建立一個 `index.html` (可參考上面 `echo` 方式建立))
-* `port-forward` 建立本地 12345 port，並且能夠在網頁上以 `http://127.0.0.1:12345` 看到建立的 index.html 內容
+* 分別針對兩個 pod 做 `port-forward`，並且能夠在網頁上以 `http://127.0.0.1:<local-port>` 看到剛剛建立內容
 * 兩個 pod 的網頁內容要不同，後面會用到
 
 # Service
