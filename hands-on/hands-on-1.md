@@ -15,6 +15,8 @@ $ kubectl create namespace <ns>
 * 預設為 `default`，為避免衝突請切換至剛建立的 ns
 
 ```bash
+$ kubectl config set-context default
+$ kubectl config use-context default
 $ kubectl config set-context --current --namespace=<ns>
 ```
 
